@@ -23,11 +23,36 @@
 #ifndef MAV_MSGS_COMMON_H
 #define MAV_MSGS_COMMON_H
 
-#include <geometry_msgs/Point.h>
-#include <geometry_msgs/Quaternion.h>
-#include <geometry_msgs/Vector3.h>
+// #include <geometry_msgs/Point.h>
+// #include <geometry_msgs/Quaternion.h>
+// #include <geometry_msgs/Vector3.h>
 #include <Eigen/Geometry>
 #include <boost/algorithm/clamp.hpp>
+
+namespace geometry_msgs{
+  struct Point
+    {
+      double x;
+      double y;
+      double z;
+  };
+
+  struct Quaternion
+  {
+    double w;
+    double x;
+    double y;
+    double z;
+  };
+  
+  struct Vector3{
+    double x;
+      double y;
+      double z;
+  };
+
+}
+
 
 namespace mav_msgs {
 
